@@ -25,11 +25,6 @@ EMBEDDING_FUNC_NAME = "multi-qa-MiniLM-L6-cos-v1"
 COLLECTION_NAME = "cockatoo_knowledge"
 
 
-def text_embedding(embedding_obj, text):
-    embedding_obj.create(model="text-embedding-ada-002", input=text)
-    return response["data"][0]["embedding"]
-
-
 def prepare_chroma_data(file_path_list: list[str]):
   """Prepare the car reviews dataset for ChromaDB"""
   ids = []
